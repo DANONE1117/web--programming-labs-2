@@ -1,10 +1,11 @@
-from flask import Flask
+from flask import Flask, redirect
 app = Flask(__name__)
 
 @app.route("/")
 @app.route("/index")
 def start():
-    return """
+    return redirect('/menu', code=302)
+    '''
     <!doctype html>
     <html>
         <head>
@@ -22,7 +23,7 @@ def start():
             </footer>
         </body>
     </html>
-    """
+    '''
 @app.route('/lab1')
 def lab1():     
     return '''
@@ -53,3 +54,24 @@ def lab1():
     </body>
 </html>
 '''
+@app.route('/menu')
+def menu():
+    return '''
+    <!doctype html>
+    <html>
+        <head>
+            <title>НГТУ, ФБ, Лабораторные работы</title>
+        </head>
+        <body>
+            <header>
+                НГТУ, ФБ, WEB-программирование, часть 2. Список лабораторных
+            </header>
+            <main>
+                <a href='/lab1'>Первая лабораторная</a>
+            </main>
+            <footer>
+                Ковылин Даниил Артурович, ФБИ-14, 3 курс, 2023
+            </footer>
+        </body>
+    </html>
+    '''
