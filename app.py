@@ -13,7 +13,7 @@ def start():
         </head>
         <body>
             <header>
-                НГТУ, ФБ, Лабораторная работ 1
+                НГТУ, ФБ, Лабораторная работа 1
             </header>
 
             <h1>web-сервер на flask</h1>
@@ -28,6 +28,7 @@ def start():
 def lab1():     
     return '''
     <!doctype html>
+     <link rel="stylesheet" href="''' + url_for('static', filename='lab1.css') + '''">
     <html>
         <head>
             <title>Ковылин Даниил Артурович, лабораторная 1</title>
@@ -47,6 +48,18 @@ def lab1():
                     веб-приложений, сознательно предоставляющих лишь самые ба-
                     зовые возможности.
                 </div>
+                <a href='/menu'> Меню</a>
+
+                <h2>Реализованные роуты</h2>
+                <ul>
+                    
+                    <li> <a href='/lab1/oak'> Дуб </a> </li>
+                    <li> <a href='/lab1/student'> студент </a> </li>
+                    <li><a href='/lab1/python'> пайтон </a> </li>
+                </ul>
+
+
+
             </main>
             <footer>
                 &copy; Ковылин Даниил Артурович, ФБИ-14, 3 курс, 2023
@@ -59,6 +72,7 @@ def menu():
 
     return '''
     <!doctype html>
+     <link rel="stylesheet" href="''' + url_for('static', filename='lab1.css') + '''">
     <html>
         <head>
             <title>НГТУ, ФБ, Лабораторные работы</title>
@@ -82,10 +96,74 @@ def oak():
     return '''
     <!doctype html>
     <link rel="stylesheet" href="''' + url_for('static', filename='lab1.css') + '''">
-    <html>
+    <html> 
         <body>
+            <header>
+                НГТУ, ФБ, WEB-программирование, часть 2. 1 лабораторная
+            </header>
+    
             <h1>Дуб</h1>
             <img src="'''+ url_for('static', filename='dub.jpg') +'''">
         </body>
+            <footer>
+                Ковылин Даниил Артурович, ФБИ-14, 3 курс, 2023
+            </footer>
+
     </html>
     '''
+
+@app.route('/lab1/student')
+def student():
+    return '''
+    <!doctype html>
+    <link rel="stylesheet" href="''' + url_for('static', filename='lab1.css') + '''">
+    <html>
+        <body>
+             <header>
+                НГТУ, ФБ, WEB-программирование, часть 2. 1 лабораторная
+            </header>
+
+            <main>
+                <h1 class='student'>Ковылин Даниил Артурович</h1>
+                <img class='logo' src="'''+ url_for('static', filename='NSTULOG.png') +'''">
+            </main>
+            <footer>
+                Ковылин Даниил Артурович, ФБИ-14, 3 курс, 2023
+            </footer>
+        </body>
+    </html>
+'''
+
+@app.route('/lab1/python')
+def python():
+    return '''
+    <!doctype html>
+    <link rel="stylesheet" href="''' + url_for('static', filename='lab1.css') + '''">
+    <html>
+        <body>
+            <header>
+                НГТУ, ФБ, WEB-программирование, часть 2. 1 лабораторная
+            </header>
+    
+            <main>
+                <div>
+                    <p>&nbsp;Python не требует явного объявления переменных, является регистро-зависим 
+                    (переменная var не эквивалентна переменной Var или VAR — это три разные переменные) 
+                    объектно-ориентированным языком.</p>
+                    <p>Python содержит такие структуры данных как списки (lists), кортежи (tuples) и словари
+                    (dictionaries). Списки — похожи на одномерные массивы 
+                    (но вы можете использовать Список включающий списки — многомерный массив), 
+                    кортежи — неизменяемые списки, словари — тоже списки, но индексы могут быть любого типа, 
+                    а не только числовыми. "Массивы" в Python могут содержать данные любого типа, 
+                    то есть в одном массиве может могут находиться числовые, строковые и другие типы данных. 
+                    Массивы начинаются с индекса 0, а последний элемент можно получить по индексу -1 
+                    Вы можете присваивать переменным функции и использовать их соответственно.</p>
+                </div>
+                <img class='python' src="'''+ url_for('static', filename='Python.png') +'''">
+            </main>
+            <footer>
+                Ковылин Даниил Артурович, ФБИ-14, 3 курс, 2023
+            </footer>
+        </body>
+    </html>
+'''

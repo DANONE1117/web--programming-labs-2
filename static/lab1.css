@@ -1,0 +1,59 @@
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 55%;
+    height: 55%;
+}
+
+.logo {
+    position: relative;
+    width: 5%;
+    top: 255px;
+    left: 250px;
+}
+
+.python {
+    width: 30%;
+    height: 50%;
+}
+
+h1 {
+    text-align: center;
+}
+
+.student {
+    position: absolute;
+    margin-top: 250px;
+    right: 35%;
+    left: 35%;
+}
+
+body {
+    background-color: rgba(161, 210, 82, 0.425);
+}
+
+p {
+    margin: 20px;
+    text-indent: 10px;
+    font-size: 20px;
+}
+
+header {
+    background-color:  darkgray;
+    color: lightgreen; 
+    padding: 10px; 
+    font-size: 16pt;
+}
+footer {
+    background: darkgrey;
+    color: brown; 
+    font-family: italic; 
+    font-size: 14pt; 
+    margin: 0px; 
+    padding: 10px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    position: fixed;
+}
