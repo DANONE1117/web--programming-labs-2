@@ -169,4 +169,5 @@ def python():
 '''
 @app.route('/lab2/example')
 def example():
-    return render_template('example.html')
+    name = 'Ковылин Даниил'
+    return render_template('example.html', name=name)
