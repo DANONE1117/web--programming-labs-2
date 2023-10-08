@@ -28,7 +28,7 @@ def start():
 def lab1():     
     return '''
     <!doctype html>
-     <link rel="stylesheet" href="''' + url_for('static', filename='lab1.css') + '''">
+     <link rel="stylesheet" href="''' + url_for('static', filename='main.css') + '''">
     <html>
         <head>
             <title>Ковылин Даниил Артурович, лабораторная 1</title>
@@ -72,7 +72,7 @@ def menu():
 
     return '''
     <!doctype html>
-     <link rel="stylesheet" href="''' + url_for('static', filename='lab1.css') + '''">
+     <link rel="stylesheet" href="''' + url_for('static', filename='main.css') + '''">
     <html>
         <head>
             <title>НГТУ, ФБ, Лабораторные работы</title>
@@ -97,7 +97,7 @@ def menu():
 def oak():
     return '''
     <!doctype html>
-    <link rel="stylesheet" href="''' + url_for('static', filename='lab1.css') + '''">
+    <link rel="stylesheet" href="''' + url_for('static', filename='main.css') + '''">
     <html> 
         <body>
             <header>
@@ -118,7 +118,7 @@ def oak():
 def student():
     return '''
     <!doctype html>
-    <link rel="stylesheet" href="''' + url_for('static', filename='lab1.css') + '''">
+    <link rel="stylesheet" href="''' + url_for('static', filename='main.css') + '''">
     <html>
         <body>
              <header>
@@ -140,7 +140,7 @@ def student():
 def python():
     return '''
     <!doctype html>
-    <link rel="stylesheet" href="''' + url_for('static', filename='lab1.css') + '''">
+    <link rel="stylesheet" href="''' + url_for('static', filename='main.css') + '''">
     <html>
         <body>
             <header>
