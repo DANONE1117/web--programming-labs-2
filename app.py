@@ -53,9 +53,9 @@ def lab1():
                 <h2>Реализованные роуты</h2>
                 <ul>
                     
-                    <li> <a href='/lab1/oak'> Дуб </a> </li>
-                    <li> <a href='/lab1/student'> студент </a> </li>
-                    <li><a href='/lab1/python'> пайтон </a> </li>
+                    <li> <a class='menu' href='/lab1/oak'> Дуб </a> </li>
+                    <li> <a class='menu' href='/lab1/student'> студент </a> </li>
+                    <li><a class='menu' href='/lab1/python'> пайтон </a> </li>
                 </ul>
 
 
@@ -83,8 +83,8 @@ def menu():
             </header>
             <main>
                 <ul>
-                <li><a href='/lab1'>Первая лабораторная</a></li>
-                <li><a href='/lab2/example'>Вторая лабораторная</a></li>
+                <li><a class='menu' href='/lab1'>Первая лабораторная</a></li>
+                <li><a class='menu' href='/lab2/example'>Вторая лабораторная</a></li>
             </main>
             <footer>
                 Ковылин Даниил Артурович, ФБИ-14, 3 курс, 2023
