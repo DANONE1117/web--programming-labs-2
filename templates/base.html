@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ковылин Даниил, {% block lab %}{% endblock%}</title>
-    <link rel="stylesheet" href="url_for('static', filename='main.css')">
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
 </head>
 <body>
     <header>
+        <a href="/menu">Меню</a>
         WEB-программирование, часть 2, {{ self.lab() }}
     </header>
-    
+
     <main>
         {% block main %}{% endblock %}
     </main>

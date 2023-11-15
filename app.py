@@ -5,25 +5,6 @@ app = Flask(__name__)
 @app.route("/index")
 def start():
     return redirect('/menu', code=302)
-    '''
-    <!doctype html>
-    <html>
-        <head>
-            <title>Ковылин Даниил Артурович, Лабораторная работа 1</title>
-        </head>
-        <body>
-            <header>
-                НГТУ, ФБ, Лабораторная работа 1
-            </header>
-
-            <h1>web-сервер на flask</h1>
-
-            <footer>
-                &copy; Ковылин Даниил Артурович, ФБИ14, 3 курс, 2023
-            </footer>
-        </body>
-    </html>
-    '''
 @app.route('/lab1')
 def lab1():     
     return '''
@@ -72,7 +53,7 @@ def menu():
 
     return '''
     <!doctype html>
-     <link rel="stylesheet" href="''' + url_for('static', filename='main.css') + '''">
+    <link rel="stylesheet" href="''' + url_for('static', filename='main.css') + '''">
     <html>
         <head>
             <title>НГТУ, ФБ, Лабораторные работы</title>
@@ -84,7 +65,7 @@ def menu():
             <main>
                 <ul>
                 <li><a class='menu' href='/lab1'>Первая лабораторная</a></li>
-                <li><a class='menu' href='/lab2/example'>Вторая лабораторная</a></li>
+                <li><a class='menu' href='/lab2/'>Вторая лабораторная</a></li>
             </main>
             <footer>
                 Ковылин Даниил Артурович, ФБИ-14, 3 курс, 2023
@@ -171,6 +152,7 @@ def python():
 '''
 @app.route('/lab2/example')
 def example():
+ 
     name = 'Ковылин Даниил'
     number = 'лабораторная работа 2'
     group = 'ФБИ-14'
@@ -197,6 +179,9 @@ def example():
     ]
     return render_template('example.html', name=name, number=number, group=group, Kurs=Kurs, fruits=fruits, books=books)
 
-    @app.route('/lab2/')
-    def lab2():
-        return render_template('lab2.html')
+@app.route('/lab2/')
+def lab2():
+    return render_template('lab2.html')
+@app.route('/lab2/flowers')
+def flowers():
+    return render_template('flowers.html')
