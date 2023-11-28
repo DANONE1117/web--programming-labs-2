@@ -70,6 +70,7 @@ def menu():
                 <ul>
                 <li><a class='menu' href='/lab1'>Первая лабораторная</a></li>
                 <li><a class='menu' href='/lab2/'>Вторая лабораторная</a></li>
+                <li><a class='menu' href='/lab3'>Третья лабораторная</a></li>
             </main>
             <footer>
                 Ковылин Даниил Артурович, ФБИ-14, 3 курс, 2023
