@@ -22,3 +22,41 @@ def login():
         return render_template('login.html', username = username, error2=error2, password = password)
 
 
+@lab4.route('/lab4/fridge', methods= ['GET', 'POST'])
+def fridge():
+    temp = request.form.get('temp')
+    head = ''
+    foot = ''
+    src=''
+    if request.method == 'GET':
+        return render_template('fridge.html')
+    if temp == '':
+        error = 'Указано пустое значение'
+        return render_template('fridge.html', temp=temp, error = error)
+    elif float(temp) < -12:
+        head = 'Не удалось установить температуру'
+        foot = 'Слишком низкое значение'
+        return render_template('fridge_temp.html', temp=temp, head=head, foot=foot)
+    elif float(temp) > -1:
+        head = 'Не удалось установить температуру'
+        foot = 'Слишком высокое значение'
+        return render_template('fridge_temp.html', temp=temp, head=head, foot=foot)
+    elif -12 <= float(temp) <= -9:
+        head = 'Установлена температура'
+        foot = 'Установлена температура: ' + temp +'°C'
+        src= 'snow.jpg'
+        return render_template('fridge_temp.html', temp=temp, head=head, foot=foot, src=src)
+    elif -8 <= float(temp) <= -5:
+        head = 'Установлена температура'
+        foot = 'Установлена температура: ' + temp +'°C'
+        src = 'snow.jpg'
+        src2 = 'snow.jpg'
+        return render_template('fridge_temp.html', temp=temp, head=head, foot=foot, src=src, src2=src2)
+    elif -4 <= float(temp) <= -1:
+        head = 'Установлена температура'
+        foot = 'Установлена температура: ' + temp +'°C'
+        src= 'snow.jpg'
+        src2 = 'snow.jpg'
+        src3 = 'snow.jpg'
+        return render_template('fridge_temp.html', temp=temp, head=head, foot=foot, src=src, src2=src2, src3=src3)
+
